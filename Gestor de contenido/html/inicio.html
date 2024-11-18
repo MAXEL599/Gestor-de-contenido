@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="../css/inicio.css">
+</head>  
+<body>
+    <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()">Modo Oscuro</button>
+    <div class="login-container">
+        <h1>Inicio de Sesión</h1>
+        <input type="text" id="username" placeholder="Usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <div class="button-container">
+            <button class="accept" onclick="login()">Aceptar</button>
+            <button class="exit" onclick="window.location.href='registrar.html'">Registrar</button>
+        </div>
+        <div class="extra-options">
+            <a href="#">Olvidé mi contraseña</a>
+            <label for="remember-username">
+                <input type="checkbox" name="remember" id="remember-username">
+                Recordar usuario
+            </label>
+        </div>
+    </div>
+
+    <!-- Modal para solicitar el correo electrónico -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Recuperar Contraseña</h2>
+            <input type="email" id="email" placeholder="Ingrese su correo electrónico" required>
+            <button onclick="sendPassword()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="../js/inicio.js"></script>
+</body>
+</html>
