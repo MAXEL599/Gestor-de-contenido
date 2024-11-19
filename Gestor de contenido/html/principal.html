@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="header">
-        <button class="publish-button" onclick="openModal()">Publicar</button>
+        <button class="publish-button" onclick="openCreateBlogModal()">Publicar</button>
         <div class="profile-menu">
             <button class="profile-button" onclick="toggleProfileMenu()">Ajustes</button>
             <div id="profile-dropdown" class="profile-dropdown">
@@ -21,11 +21,11 @@
         <!-- Cuadros para crear blog o página web -->
         <div class="content-box">
             <img src="ruta/a/tu/imagen1.jpg" alt="Imagen del contenido">
-            <button onclick="openCreateBlogModal()">Crear Blog o Página Web</button>
+            <button onclick="redirectToCreate()">Crear Blog o Página Web</button>
         </div>
         <div class="content-box">
             <img src="ruta/a/tu/imagen2.jpg" alt="Imagen del contenido">
-            <button onclick="openCreateBlogModal()">Crear Blog o Página Web</button>
+            <button onclick="redirectToCreate()">Crear Blog o Página Web</button>
         </div>
     </div>
 
