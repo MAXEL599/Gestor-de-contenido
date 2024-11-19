@@ -21,12 +21,13 @@
         <!-- Cuadros para crear blog o página web -->
         <div class="content-box">
             <img src="ruta/a/tu/imagen1.jpg" alt="Imagen del contenido">
-            <button onclick="redirectToCreate()">Crear Blog o Página Web</button>
+            <button onclick="openCreateBlogModal()">Crear Blog o Página Web</button>
         </div>
         <div class="content-box">
             <img src="ruta/a/tu/imagen2.jpg" alt="Imagen del contenido">
-            <button onclick="redirectToCreate()">Crear Blog o Página Web</button>
-       
+            <button onclick="openCreateBlogModal()">Crear Blog o Página Web</button>
+        </div>
+    </div>
 
     <!-- Modal para subir archivos -->
     <div id="publishModal" class="modal">  
@@ -36,6 +37,18 @@
             <textarea id="postText" placeholder="Escribe tu hilo aquí..."></textarea>
             <input type="file" id="fileInput" multiple>
             <button onclick="publishContent()">Publicar</button>
+        </div>
+    </div>
+
+    <!-- Modal para crear un blog -->
+    <div id="createBlogModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCreateBlogModal()">&times;</span>
+            <h2>Crear Blog</h2>
+            <input type="text" id="blogTitle" placeholder="Título del Blog">
+            <textarea id="blogText" placeholder="Escribe tu blog aquí..."></textarea>
+            <input type="file" id="blogImage" multiple>
+            <button onclick="publishBlog()">Publicar Blog</button>
         </div>
     </div>
 

@@ -81,3 +81,48 @@ function publishContent() {
 function redirectToCreate() {
     window.location.href = 'crear.html';
 }
+
+// Abre el modal para crear un blog
+function openCreateBlogModal() {
+    document.getElementById('createBlogModal').style.display = 'block';
+}
+
+// Cierra el modal para crear un blog
+function closeCreateBlogModal() {
+    document.getElementById('createBlogModal').style.display = 'none';
+}
+
+// Publica el blog y lo agrega a la página principal
+function publishBlog() {
+    const title = document.getElementById('blogTitle').value;
+    const text = document.getElementById('blogText').value;
+    const imageInput = document.getElementById('blogImage');
+    const imageFiles = imageInput.files;
+
+    // Crear un nuevo contenedor para el blog
+    const blogContainer = document.createElement('div');
+    blogContainer.className = 'blog-post';
+
+    // Agregar el título
+    const blogTitle = document.createElement('h3');
+    blogTitle.textContent = title;
+    blogContainer.appendChild(blogTitle);
+
+    // Agregar el texto
+    const blogText = document.createElement('p');
+    blogText.textContent = text;
+    blogContainer.appendChild(blogText);
+
+    // Agregar las imágenes
+    for (let i = 0; i < imageFiles.length; i++) {
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(imageFiles[i]);
+        blogContainer.appendChild(img);
+    }
+
+    // Agregar el nuevo blog a la página principal
+    document.getElementById('main-container').appendChild(blogContainer);
+
+    // Cerrar el modal
+    closeCreateBlogModal();
+}
